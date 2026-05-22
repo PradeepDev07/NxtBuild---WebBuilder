@@ -8,7 +8,7 @@ const app = express();
 app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173' }));
 app.use(express.json({ limit: '10mb' }));
 app.use('/', (req, res) => {
-  res.json({ message: 'Health check successful' });
+  res.json({ code: 200, message: 'Health check successful' });
 });
 app.use('/api', routes);
 

@@ -5,9 +5,11 @@ import { errorHandler, notFoundHandler } from './middleware/error.middleware.js'
 
 const app = express();
 
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173' }));
+const clientOrigin = (process.env.CLIENT_URL || 'http://localhost:5173').replace(/\/$/, '');
+
+app.use(cors({ origin: clientOrigin }));
 app.use(express.json({ limit: '10mb' }));
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ code: 200, message: 'Health check successful' });
 });
 app.use('/api', routes);

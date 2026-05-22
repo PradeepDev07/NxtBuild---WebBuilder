@@ -1,0 +1,29 @@
+.DS_Store
+
+# Dependencies
+client/node_modules/
+server/node_modules/
+
+# Build outputs
+client/dist/
+client/.vite/
+server/dist/
+server/build/
+
+# Environment files
+.env
+.env.*
+client/.env
+client/.env.*
+server/.env
+server/.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Misc
+coverage/

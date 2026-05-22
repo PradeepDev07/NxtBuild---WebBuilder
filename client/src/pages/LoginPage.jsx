@@ -48,9 +48,10 @@ function LoginPage() {
       );
       navigate('/dashboard');
     } catch (err) {
-      const message = err.response && err.response.data && err.response.data.message
-        ? err.response.data.message
-        : 'Something went wrong.';
+      console.error('Login/Register error:', err);
+      const message = (err && err.response && err.response.data && err.response.data.message)
+        || (err && err.message)
+        || 'Something went wrong.';
       showToast(message, 'error');
     } finally {
       setLoading(false);

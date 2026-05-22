@@ -89,6 +89,13 @@ function LandingPage() {
             <span className="landing-logo-mark">&lt;/&gt;</span> NxtBuild
           </span>
           <p className="landing-footer-text">Built with AI. Powered by Gemini.</p>
+          <p className="landing-footer-text">
+            <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a>
+
+          </p>
+          <p className="landing-footer-text">
+            Copyright © 2023 NxtBuild. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>

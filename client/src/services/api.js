@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
+const BASE_URL = process.env.REACT_APP_SERVER_API_URL || 'http://localhost:5001/api';
 
 const getHeaders = () => {
   const token = Cookies.get('token');
